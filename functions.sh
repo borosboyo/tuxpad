@@ -3319,3 +3319,8 @@ zz ()
 { 
     history -p '!!' | tee $HOME/eval | tee $HOME/public/eval
 }
+
+k3sInit () {
+    curl -sfL https://get.k3s.io | sh - 
+    sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
+}
